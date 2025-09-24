@@ -1,1 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #c569ff #f1f1f1;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    scroll-behavior: smooth;
+}
+
+.cursor-ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #c569ff;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+    z-index: 9999;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c569ff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a84fd6;
+}
+
+#home {
+    height: 100%;
+    width: 100%;
+}
+
+#navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 70px;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+#navbar>h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#navbar-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    background-color: black;
+    padding: 15px 40px;
+    margin: 0 auto;
+    border-radius: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#navbar-right>a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 0.3s ease;
+}
+
+#navbar-right>a:hover {
+    transform: translateY(-3px);
+}
+
+#button {
+    margin-left: 28%;
+    border: 1px solid black;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+#button>a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#button:hover {
+    transform: scale(1.05);
+}
+
+#main-text {
+    margin-left: 8%;
+    margin-top: 6%;
+}
+
+#main-text>h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 8rem;
+    font-weight: 400;
+    color: black;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+#card-image {
+    background-image: url(https://d.imgvision.net/skinny.com/ChatGPT_Image_Sep_7__2025__10_15_29_PM.png);
+    border-radius: 10px;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 400px;
+}
+
+.circle-btn {
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #c569ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid whitesmoke;
+}
+
+.circle-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotateText 10s linear infinite;
+}
+
+.circle-text textPath {
+    text-transform: uppercase;
+}
+
+.arrow {
+    font-size: 4rem;
+    font-weight: 100;
+    color: white;
+    z-index: 2;
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.order-btn {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding: 20px 40px;
+    position: absolute;
+    top: 63%;
+    left: 63%;
+}
+
+.order-btn h1 {
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#alt-text {
+    position: absolute;
+    top: 68%;
+    left: 9%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: black;
+    text-align: left;
+}
+
+.community {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 135px;
+    margin-left: 8%;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatars img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-left: -15px;
+}
+
+.avatars img:first-child {
+    margin-left: 0;
+}
+
+.community-text p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: gray;
+}
+
+.community-text h3 {
+    margin: 2px 0 0;
+    font-size: 18px;
+    font-weight: 300;
+    font-weight: 600;
+    color: rgba(37, 37, 37, 0.842);
+}
+
+#about {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
+
+#about>h1 {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 8%;
+}
+
+#packs {
+    gap: 50px;
+    display: flex;
+    margin-left: 19%;
+}
+
+.pack-one,
+.pack-two {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#packs i {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 12px;
+    padding: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pack-one p,
+.pack-two p {
+    color: black;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+span {
+    font-weight: 600;
+}
+
+#designs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* centers black-part horizontally */
+    align-items: center;
+    /* centers black-part vertically */
+}
+
+#black-part {
+    width: 93%;
+    height: 100%;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.heading h2 {
+    font-family: "Montserrat", sans-serif;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.heading p {
+    font-family: "Montserrat", sans-serif;
+    color: rgba(245, 245, 245, 0.7);
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #444;
+    border-radius: 30px;
+    padding: 15px 30px;
+    width: 500px;
+    margin-top: -18px;
+    margin-left: 36%;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.search-bar i {
+    font-size: 20px;
+    color: #aaa;
+    margin-left: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#why-choose-us {
+    width: 100%;
+    height: 100%;
+}
